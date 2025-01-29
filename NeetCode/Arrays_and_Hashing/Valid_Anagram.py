@@ -44,7 +44,6 @@ def main():
     solution = Solution()
 
     s, t = "racecar", "carrace"
-
     print(solution.isAnagram2(s, t))
 
 
