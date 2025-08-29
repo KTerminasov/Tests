@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        {% if quote %}
+            <div class="card">
+                <div class="card-body text-center">
+                    <blockquote class="blockquote mb-4">
+                        <p>"{{ quote.quote_text }}"</p>
+                        <footer class="blockquote-footer">
+                            {{ quote.source.title }} <cite>({{ quote.source.get_tag_display }})</cite>
+                        </footer>
+                    </blockquote>
+                    
+                    <div class="d-flex justify-content-center gap-3 mb-3">
+                        <button onclick="likeQuote({{ quote.id }})" class="btn btn-outline-success">
+                            <i class="bi bi-hand-thumbs-up"></i> <span id="likes-{{ quote.id }}">{{ quote.likes }}</span>
+                        </button>
+                        <button onclick="dislikeQuote({{ quote.id }})" class="btn btn-outline-danger">
+                            <i class="bi bi-hand-thumbs-down"></i> <span id="dislikes-{{ quote.id }}">{{ quote.dislikes }}</span>
+                        </button>
+                    </div>
+                    
+                    <div class="text-muted">
+                        Просмотров: {{ quote.views }} | Вес: {{ quote.weight }}
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-3">
+                <a href="/" class="btn btn-dark">Следующая цитата</a>
+            </div>
+        {% else %}
+            <div class="text-center">
+                <h3>Цитат пока нет</h3>
+                <a href="/create_quote/" class="btn btn-dark">Добавить первую цитату</a>
+            </div>
+        {% endif %}
+    </div>
+</div>
+
+<script>
+function likeQuote(quoteId) {
+    fetch(`/like_quote/${quoteId}/`, {
+        method: 'POST',
+        headers: {'X-CSRFToken': '{{ csrf_token }}'}
+    })
+    .then(response => response.json())
+    .then(data => {
+        document.getElementById(`likes-${quoteId}`).textContent = data.likes;
+        document.getElementById(`dislikes-${quoteId}`).textContent = data.dislikes;
+    });
+}
+
+function dislikeQuote(quoteId) {
+    fetch(`/dislike_quote/${quoteId}/`, {
+        method: 'POST',
+        headers: {'X-CSRFToken': '{{ csrf_token }}'}
+    })
+    .then(response => response.json())
+    .then(data => {
+        document.getElementById(`likes-${quoteId}`).textContent = data.likes;
+        document.getElementById(`dislikes-${quoteId}`).textContent = data.dislikes;
+    });
+}
+</script>
+{% endblock %}

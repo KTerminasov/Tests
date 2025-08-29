@@ -22,8 +22,11 @@ class Source(models.Model):
     class Meta:
         unique_together = ['title', 'tag']
 
+    def __str__(self):
+        return self.title
 
-class Qoute(models.Model):
+
+class Quote(models.Model):
     """Модель цитаты."""
 
     source = models.ForeignKey(

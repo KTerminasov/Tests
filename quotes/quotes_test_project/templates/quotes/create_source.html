@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title mb-0">Добавить новый источник</h4>
+            </div>
+            <div class="card-body">
+                <form method="post">
+                    {% csrf_token %}
+                    
+                    <!-- Название источника -->
+                    <div class="mb-3">
+                        <label for="id_title" class="form-label">Название источника</label>
+                        <input type="text" 
+                               class="form-control {% if form.title.errors %}is-invalid{% endif %}" 
+                               id="id_title" 
+                               name="title" 
+                               value="{{ form.title.value|default:'' }}"
+                               placeholder="Введите название источника"
+                               required
+                               maxlength="100">
+                        {% if form.title.errors %}
+                            <div class="text-danger">{{ form.title.errors }}</div>
+                        {% endif %}
+                        <div class="form-text">Максимум 100 символов</div>
+                    </div>
+
+                    <!-- Выбор тега -->
+                    <div class="mb-3">
+                        <label for="id_tag" class="form-label">Тип источника</label>
+                        <select class="form-select {% if form.tag.errors %}is-invalid{% endif %}" 
+                                id="id_tag" 
+                                name="tag" 
+                                required>
+                            <option value="">Выберите тип источника...</option>
+                            <option value="Book" {% if form.tag.value == "Book" %}selected{% endif %}>Книга</option>
+                            <option value="Movie" {% if form.tag.value == "Movie" %}selected{% endif %}>Фильм</option>
+                            <option value="Series" {% if form.tag.value == "Series" %}selected{% endif %}>Сериал</option>
+                            <option value="Game" {% if form.tag.value == "Game" %}selected{% endif %}>Игра</option>
+                            <option value="Scientific article" {% if form.tag.value == "Scientific article" %}selected{% endif %}>Научная статья</option>
+                            <option value="Other" {% if form.tag.value == "Other" %}selected{% endif %}>Другое</option>
+                        </select>
+                        {% if form.tag.errors %}
+                            <div class="text-danger">{{ form.tag.errors }}</div>
+                        {% endif %}
+                    </div>
+
+                    <!-- Общие ошибки формы -->
+                    {% if form.non_field_errors %}
+                        <div class="alert alert-danger">
+                            {% for error in form.non_field_errors %}
+                                <i class="bi bi-exclamation-triangle"></i> {{ error }}
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+
+                    <div class="d-flex gap-2">
+                        <button type="submit" class="btn btn-dark">
+                            <i class="bi bi-check-circle"></i> Создать источник
+                        </button>
+                        <a href="{% url 'create_quote' %}" class="btn btn-secondary">
+                            <i class="bi bi-arrow-left"></i> Назад к цитате
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
