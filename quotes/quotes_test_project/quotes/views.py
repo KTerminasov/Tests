@@ -74,7 +74,19 @@ def edit_quote(request, quote_id):
 def delete_quote(request, quote_id):
     """Удаление цитаты."""
 
-    return HttpResponse(f'Тут можно будет удалить цитату #{quote_id}')
+    template = 'quotes/delete_quote.html'
+
+    quote = get_object_or_404(Quote, id=quote_id)
+
+    if request.method == 'POST':
+        quote.delete()
+        redirect('quotes:manage_quotes')
+
+    context = {
+        'quote': quote
+    }
+
+    return render(request, template, context)
 
 
 @require_POST
