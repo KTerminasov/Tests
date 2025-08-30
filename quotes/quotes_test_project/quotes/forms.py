@@ -1,5 +1,5 @@
 from django import forms
-from .models import Quote, Source
+from .models import Quote
 
 
 class QuoteForm(forms.ModelForm):
@@ -27,16 +27,4 @@ class QuoteForm(forms.ModelForm):
     #     self.fields['source'].queryset = Source.objects.annotate(
     #         quote_count=models.Count('quote')
     #     ).filter(quote_count__lt=3)
-
-
-class SourceForm(forms.ModelForm):
-    """Форма для создания и изменения источника."""
-
-    class Meta:
-        model = Source
-        fields = ['title', 'tag']
-        widgets = {
-            'title': forms.TextInput(attrs={'class': 'form-control'}),
-            'tag': forms.Select(attrs={'class': 'form-control'}),
-        }
 

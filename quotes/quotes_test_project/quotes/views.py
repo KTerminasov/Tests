@@ -1,11 +1,15 @@
-from django.shortcuts import render, redirect, get_object_or_404
-from .models import Source, Quote
-from django.http import JsonResponse
-from .forms import SourceForm, QuoteForm
 import random
-from django.views.decorators.http import require_POST
+
 from django.core.paginator import Paginator
-from django.db.models import Q, Sum, Count
+from django.db.models import Count, Q, Sum
+from django.http import JsonResponse
+from django.shortcuts import get_object_or_404, redirect, render
+from django.views.decorators.http import require_POST
+
+from sources.models import Source
+
+from .forms import QuoteForm
+from .models import Quote
 
 
 def get_random_quote(request):
@@ -43,27 +47,9 @@ def create_quote(request):
     return render(request, 'quotes/create_quote.html', context)
 
 
-def create_source(request):
-    """Создание источника цитат."""
-
-    if request.method == 'POST':
-        form = SourceForm(request.POST)
-
-        if form.is_valid():
-            form.save()
-            return redirect('create_quote') 
-    else:
-        form = SourceForm()
-
-    context = {
-        'form': form
-    }
-
-    return render(request, 'quotes/create_source.html', context)
-
-
 @require_POST
 def like_quote(request, quote_id):
+    """Проставление лайка цитате."""
     quote = get_object_or_404(Quote, id=quote_id)
     quote.likes += 1
     quote.save()
