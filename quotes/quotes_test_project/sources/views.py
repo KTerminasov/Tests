@@ -44,7 +44,21 @@ def edit_source(request, source_id):
 def delete_source(request, source_id):
     """Удаление источника"""
 
-    return HttpResponse(f'Здесь можно будет удалить источник #{source_id}.')
+    template = 'sources/delete_source.html'
+
+    source = get_object_or_404(Source, id=source_id)
+
+    if request.method == 'POST':
+        source.delete()
+        return redirect('sources:manage_sources')
+
+    context = {
+        'source': source,
+    }
+
+
+
+    return render(request, template, context)
 
 
 def manage_sources(request):

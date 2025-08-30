@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header bg-danger text-white">
+                <h4 class="card-title mb-0">Удаление источника</h4>
+            </div>
+            <div class="card-body">
+                <div class="alert alert-warning">
+                    <h5>Вы уверены, что хотите удалить источник "{{ source.title }}"?</h5>
+                    <p class="mb-0"><strong>Количество цитат, которые будут удалены вместе с ним:</strong> {{ source.quotes_count }}</p>
+                </div>
+
+                {% if source.quotes_count > 0 %}
+                <div class="alert alert-info">
+                    <h6>Внимание!</h6>
+                    <p class="mb-0">При удалении источника также будут удалены все связанные с ним цитаты ({{ source.quotes_count }} шт.).</p>
+                </div>
+                {% endif %}
+
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="d-flex gap-2">
+                        <button type="submit" class="btn btn-danger">
+                            <i class="bi bi-trash"></i> Да, удалить
+                        </button>
+                        <a href="{% url 'sources:manage_sources' %}" class="btn btn-secondary">
+                            <i class="bi bi-x-circle"></i> Отмена
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
