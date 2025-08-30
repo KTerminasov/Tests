@@ -1,7 +1,8 @@
 from django.http import HttpResponse
-from django.shortcuts import redirect, render
+from django.shortcuts import get_object_or_404, redirect, render
 
 from .forms import SourceForm
+from .models import Source
 
 
 def create_source(request):
@@ -9,14 +10,10 @@ def create_source(request):
 
     template = 'sources/create_source.html'
 
-    if request.method == 'POST':
-        form = SourceForm(request.POST)
-
-        if form.is_valid():
-            form.save()
-            return redirect('quotes:create_quote') 
-    else:
-        form = SourceForm()
+    form = SourceForm(request.POST or None)
+    if form.is_valid():
+        form.save()
+        return redirect('quotes:manage_sources')
 
     context = {
         'form': form
@@ -28,7 +25,20 @@ def create_source(request):
 def edit_source(request, source_id):
     """Изменение источника."""
 
-    return HttpResponse(f'Здесь можно будет изменить источник #{source_id}.')
+    template = 'sources/edit_source.html'
+
+    source = get_object_or_404(Source, id=source_id)
+    form = SourceForm(request.POST or None, instance=source)
+
+    if form.is_valid():
+        form.save()
+        return redirect('sources:manage_sources')
+
+    context = {
+        'form': form
+    }
+
+    return render(request, template, context)
 
 
 def delete_source(request, source_id):

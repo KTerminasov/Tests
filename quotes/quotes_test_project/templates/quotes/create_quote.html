@@ -16,12 +16,7 @@
                         {{ form.source }}
                         {% if form.source.errors %}
                             <div class="text-danger">{{ form.source.errors }}</div>
-                        {% endif %}
-                        <div class="form-text">
-                            <a href="{% url 'sources:create_source' %}" class="text-decoration-none">
-                                + Добавить новый источник
-                            </a>
-                        </div> 
+                        {% endif %}                        
                     </div>
 
                     <div class="mb-3">
