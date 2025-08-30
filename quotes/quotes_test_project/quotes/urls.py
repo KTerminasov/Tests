@@ -4,11 +4,35 @@ from . import views
 app_name = 'quotes'
 
 urlpatterns = [
-    path('', views.get_random_quote, name='get_random_quote'),
-    path('create/', views.create_quote, name='create_quote'),    
-    path('<int:quote_id>/like/', views.like_quote, name='like_quote'),
-    path('<int:quote_id>/dislike/', views.dislike_quote, name='dislike_quote'),
-    path('manage/', views.manage_quotes, name='manage_quotes'),
-    path('<int:quote_id>/edit/', views.edit_quote, name='edit_quote'),
+    path(
+        '',
+        views.get_random_quote,
+        name='get_random_quote'
+    ),
+    path(
+        'quotes/create/',
+        views.create_quote,
+        name='create_quote'
+    ),
+    path(
+        'quotes/edit/<int:quote_id>/',
+        views.edit_quote,
+        name='edit_quote'
+    ),
+    path(
+        'quotes/like/<int:quote_id>/',
+        views.like_quote,
+        name='like_quote'
+    ),
+    path(
+        'quotes/dislike/<int:quote_id>/',
+        views.dislike_quote,
+        name='dislike_quote'
+    ),
+    path(
+        'quotes/manage/',
+        views.manage_quotes,
+        name='manage_quotes'
+    ),
     # path('/delete/')
 ]
