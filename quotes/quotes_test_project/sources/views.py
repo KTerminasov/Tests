@@ -1,3 +1,4 @@
+from django.core.paginator import Paginator
 from django.http import HttpResponse
 from django.shortcuts import get_object_or_404, redirect, render
 
@@ -13,7 +14,7 @@ def create_source(request):
     form = SourceForm(request.POST or None)
     if form.is_valid():
         form.save()
-        return redirect('quotes:manage_sources')
+        return redirect('sources:manage_sources')
 
     context = {
         'form': form
@@ -56,12 +57,22 @@ def delete_source(request, source_id):
         'source': source,
     }
 
-
-
     return render(request, template, context)
 
 
 def manage_sources(request):
     """Управление источниками."""
 
-    return HttpResponse('Здесь будет управление источниками.')
+    template = 'sources/manage_sources.html'
+
+    sources_list = Source.objects.all()
+
+    paginator = Paginator(sources_list, 10)
+    page_number = request.GET.get('page')
+    sources = paginator.get_page(page_number)
+
+    context = {
+        'sources': sources
+    }
+    
+    return render(request, template, context)
