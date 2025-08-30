@@ -34,7 +34,7 @@
         {% else %}
             <div class="text-center">
                 <h3>Цитат пока нет</h3>
-                <a href="/create_quote/" class="btn btn-dark">Добавить первую цитату</a>
+                <a href={% url 'quotes:create_quote' %} class="btn btn-dark">Добавить первую цитату</a>
             </div>
         {% endif %}
     </div>
@@ -42,7 +42,7 @@
 
 <script>
 function likeQuote(quoteId) {
-    fetch(`/like_quote/${quoteId}/`, {
+    fetch(`quotes/like/${quoteId}/`, {
         method: 'POST',
         headers: {'X-CSRFToken': '{{ csrf_token }}'}
     })
@@ -54,7 +54,7 @@ function likeQuote(quoteId) {
 }
 
 function dislikeQuote(quoteId) {
-    fetch(`/dislike_quote/${quoteId}/`, {
+    fetch(`quotes/dislike/${quoteId}/`, {
         method: 'POST',
         headers: {'X-CSRFToken': '{{ csrf_token }}'}
     })

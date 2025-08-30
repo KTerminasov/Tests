@@ -13,7 +13,7 @@ class Quote(models.Model):
     )
     quote_text = models.TextField(verbose_name="Текст цитаты")
     weight = models.PositiveSmallIntegerField(
-        validators=[MinValueValidator(1), MaxValueValidator(100)], 
+        validators=[MinValueValidator(1), MaxValueValidator(100)],
         verbose_name="Вес"
     )
     views = models.PositiveIntegerField(default=0, verbose_name="Просмотры")

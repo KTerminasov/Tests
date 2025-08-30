@@ -20,6 +20,11 @@ urlpatterns = [
         name='edit_quote'
     ),
     path(
+        'quotes/delete/<int:quote_id>/',
+        views.delete_quote,
+        name='delete_quote'
+    ),
+    path(
         'quotes/like/<int:quote_id>/',
         views.like_quote,
         name='like_quote'
@@ -34,5 +39,9 @@ urlpatterns = [
         views.manage_quotes,
         name='manage_quotes'
     ),
-    # path('/delete/')
+    path(
+        'quotes/top_quotes/',
+        views.get_top_quotes,
+        name='get_top_quotes'
+    )
 ]

@@ -58,12 +58,12 @@
                                 </td>
                                 <td>
                                     <div class="btn-group btn-group-sm">
-                                        <a href="{% url 'quotes:edit_quote' quote.id %}" class="btn btn-dark" title="Редактировать">
+                                        <a href="{% url 'quotes:edit_quote' quote.id %}" class="btn btn-outline-dark" title="Редактировать">
                                             <i class="bi bi-pencil"></i>
                                         </a>
-                                        {% comment %} <a href="{% url 'delete_quote' quote.id %}" class="btn btn-outline-danger" title="Удалить">
+                                        <a href="{% url 'quotes:delete_quote' quote.id %}" class="btn btn-outline-dark" title="Удалить">
                                             <i class="bi bi-trash"></i>
-                                        </a> {% endcomment %}
+                                        </a>
                                     </div> 
                                 </td>
                             </tr>

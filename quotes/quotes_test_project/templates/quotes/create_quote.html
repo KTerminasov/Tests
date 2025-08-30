@@ -18,7 +18,7 @@
                             <div class="text-danger">{{ form.source.errors }}</div>
                         {% endif %}
                         <div class="form-text">
-                            <a href="{% url 'create_source' %}" class="text-decoration-none">
+                            <a href="{% url 'sources:create_source' %}" class="text-decoration-none">
                                 + Добавить новый источник
                             </a>
                         </div> 
@@ -49,7 +49,7 @@
                         <button type="submit" class="btn btn-dark">
                             <i class="bi bi-check-circle"></i> Создать цитату
                         </button>
-                        <a href="{% url 'get_random_quote' %}" class="btn btn-secondary">
+                        <a href="{% url 'quotes:get_random_quote' %}" class="btn btn-secondary">
                             <i class="bi bi-arrow-left"></i> Назад
                         </a>
                     </div>
