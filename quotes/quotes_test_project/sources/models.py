@@ -22,4 +22,5 @@ class Source(models.Model):
         unique_together = ['title', 'tag']
 
     def __str__(self):
-        return self.title
+        return self.title   
+    

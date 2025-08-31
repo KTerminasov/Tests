@@ -9,7 +9,7 @@ class Quote(models.Model):
     source = models.ForeignKey(
         Source, on_delete=models.CASCADE,
         verbose_name="Источник цитаты.",
-        related_name="Цитаты"
+        related_name="quotes"
     )
     quote_text = models.TextField(verbose_name="Текст цитаты")
     weight = models.PositiveSmallIntegerField(

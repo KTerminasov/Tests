@@ -1,0 +1,322 @@
+[
+{
+  "model": "sources.source",
+  "pk": 1,
+  "fields": {
+    "title": "Иван Васильевич меняет профессию",
+    "tag": "Movie"
+  }
+},
+{
+  "model": "sources.source",
+  "pk": 2,
+  "fields": {
+    "title": "Операция «Ы» и другие приключения Шурика",
+    "tag": "Movie"
+  }
+},
+{
+  "model": "sources.source",
+  "pk": 3,
+  "fields": {
+    "title": "Кавказская пленница",
+    "tag": "Movie"
+  }
+},
+{
+  "model": "sources.source",
+  "pk": 4,
+  "fields": {
+    "title": "Джентельмены удачи",
+    "tag": "Movie"
+  }
+},
+{
+  "model": "sources.source",
+  "pk": 5,
+  "fields": {
+    "title": "Бриллиантовая рука",
+    "tag": "Movie"
+  }
+},
+{
+  "model": "sources.source",
+  "pk": 6,
+  "fields": {
+    "title": "Война и мир",
+    "tag": "Book"
+  }
+},
+{
+  "model": "sources.source",
+  "pk": 7,
+  "fields": {
+    "title": "Теория относительности для чайников",
+    "tag": "Scientific article"
+  }
+},
+{
+  "model": "sources.source",
+  "pk": 8,
+  "fields": {
+    "title": "The Witcher 3: Wild Hunt",
+    "tag": "Game"
+  }
+},
+{
+  "model": "sources.source",
+  "pk": 9,
+  "fields": {
+    "title": "Игра престолов",
+    "tag": "Series"
+  }
+},
+{
+  "model": "sources.source",
+  "pk": 10,
+  "fields": {
+    "title": "Народные анекдоты",
+    "tag": "Other"
+  }
+},
+{
+  "model": "quotes.quote",
+  "pk": 1,
+  "fields": {
+    "source": 1,
+    "quote_text": "Я требую продолжения банкета!",
+    "weight": 95,
+    "views": 1250,
+    "likes": 234,
+    "dislikes": 15
+  }
+},
+{
+  "model": "quotes.quote",
+  "pk": 2,
+  "fields": {
+    "source": 1,
+    "quote_text": "Какая гадость эта ваша заливная рыба!",
+    "weight": 90,
+    "views": 980,
+    "likes": 187,
+    "dislikes": 8
+  }
+},
+{
+  "model": "quotes.quote",
+  "pk": 3,
+  "fields": {
+    "source": 1,
+    "quote_text": "Оставьте меня, старушка, я в печали.",
+    "weight": 85,
+    "views": 745,
+    "likes": 156,
+    "dislikes": 12
+  }
+},
+{
+  "model": "quotes.quote",
+  "pk": 4,
+  "fields": {
+    "source": 2,
+    "quote_text": "Надо, Федя, надо!",
+    "weight": 88,
+    "views": 1120,
+    "likes": 245,
+    "dislikes": 6
+  }
+},
+{
+  "model": "quotes.quote",
+  "pk": 5,
+  "fields": {
+    "source": 2,
+    "quote_text": "Опомнись, Иванов, ты же профессор!",
+    "weight": 82,
+    "views": 890,
+    "likes": 178,
+    "dislikes": 9
+  }
+},
+{
+  "model": "quotes.quote",
+  "pk": 6,
+  "fields": {
+    "source": 3,
+    "quote_text": "Шурик, это ненаучно!",
+    "weight": 87,
+    "views": 1020,
+    "likes": 210,
+    "dislikes": 11
+  }
+},
+{
+  "model": "quotes.quote",
+  "pk": 7,
+  "fields": {
+    "source": 3,
+    "quote_text": "Гусар денег не берет! Гусар деньги берет... в долг!",
+    "weight": 93,
+    "views": 1560,
+    "likes": 312,
+    "dislikes": 18
+  }
+},
+{
+  "model": "quotes.quote",
+  "pk": 8,
+  "fields": {
+    "source": 4,
+    "quote_text": "Зачем ты меня обижаешь, Лёлик?",
+    "weight": 89,
+    "views": 1340,
+    "likes": 267,
+    "dislikes": 14
+  }
+},
+{
+  "model": "quotes.quote",
+  "pk": 9,
+  "fields": {
+    "source": 4,
+    "quote_text": "Утром деньги — вечером стулья, вечером деньги — утром стулья.",
+    "weight": 91,
+    "views": 1450,
+    "likes": 289,
+    "dislikes": 16
+  }
+},
+{
+  "model": "quotes.quote",
+  "pk": 10,
+  "fields": {
+    "source": 5,
+    "quote_text": "Чтоб ты жил на одну зарплату!",
+    "weight": 86,
+    "views": 1670,
+    "likes": 345,
+    "dislikes": 22
+  }
+},
+{
+  "model": "quotes.quote",
+  "pk": 11,
+  "fields": {
+    "source": 5,
+    "quote_text": "Не вижу горизонта!",
+    "weight": 84,
+    "views": 1230,
+    "likes": 256,
+    "dislikes": 13
+  }
+},
+{
+  "model": "quotes.quote",
+  "pk": 12,
+  "fields": {
+    "source": 6,
+    "quote_text": "Все счастливые семьи похожи друг на друга, каждая несчастливая семья несчастлива по-своему. Особенно когда теща приезжает.",
+    "weight": 78,
+    "views": 980,
+    "likes": 198,
+    "dislikes": 25
+  }
+},
+{
+  "model": "quotes.quote",
+  "pk": 13,
+  "fields": {
+    "source": 7,
+    "quote_text": "E=mc², но только если c — это скорость света, а не скорость, с которой ты бежишь к холодильнику ночью.",
+    "weight": 80,
+    "views": 1560,
+    "likes": 345,
+    "dislikes": 28
+  }
+},
+{
+  "model": "quotes.quote",
+  "pk": 14,
+  "fields": {
+    "source": 8,
+    "quote_text": "Ведьмак — это не просто профессия, это призвание. Особенно когда нужно выбрать: сыграть в гвинт или спасти мир.",
+    "weight": 83,
+    "views": 1890,
+    "likes": 412,
+    "dislikes": 19
+  }
+},
+{
+  "model": "quotes.quote",
+  "pk": 15,
+  "fields": {
+    "source": 9,
+    "quote_text": "Зима близко... а отопление еще не включили.",
+    "weight": 79,
+    "views": 1340,
+    "likes": 289,
+    "dislikes": 31
+  }
+},
+{
+  "model": "quotes.quote",
+  "pk": 16,
+  "fields": {
+    "source": 10,
+    "quote_text": "Программист на собеседовании: 'Опыт работы с Python — 5 лет'. На самом деле: 'Смотрел 5 лет видео про Python на YouTube'.",
+    "weight": 88,
+    "views": 2450,
+    "likes": 512,
+    "dislikes": 17
+  }
+},
+{
+  "model": "quotes.quote",
+  "pk": 17,
+  "fields": {
+    "source": 10,
+    "quote_text": "Моя жизнь — это постоянный выбор между 'лягу спать пораньше' и 'посмотрю еще одну серию'.",
+    "weight": 85,
+    "views": 1980,
+    "likes": 423,
+    "dislikes": 24
+  }
+},
+{
+  "model": "quotes.quote",
+  "pk": 18,
+  "fields": {
+    "source": 10,
+    "quote_text": "Девушка: 'Я не сложная, я просто со своими правилами'. Ее правила:",
+    "weight": 82,
+    "views": 1760,
+    "likes": 378,
+    "dislikes": 42
+  }
+},
+{
+  "model": "quotes.quote",
+  "pk": 19,
+  "fields": {
+    "source": 7,
+    "quote_text": "Кот Шрёдингера одновременно и жив, и мертв. Мой кот в 6 утра: только мертв.",
+    "weight": 87,
+    "views": 1670,
+    "likes": 356,
+    "dislikes": 15
+  }
+},
+{
+  "model": "quotes.quote",
+  "pk": 20,
+  "fields": {
+    "source": 8,
+    "quote_text": "Ведьмак: 'Меч лучше магии'. Также ведьмак: *постоянно использует знаки и зелья*.",
+    "weight": 84,
+    "views": 1450,
+    "likes": 312,
+    "dislikes": 21
+  }
+}
+]

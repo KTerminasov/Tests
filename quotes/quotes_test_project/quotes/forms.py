@@ -1,5 +1,7 @@
 from django import forms
+from django.db import models 
 from .models import Quote
+from sources.models import Source
 
 
 class QuoteForm(forms.ModelForm):
@@ -20,11 +22,11 @@ class QuoteForm(forms.ModelForm):
                 }),
         }
 
-    # def __init__(self, *args, **kwargs):
-    #     """Переопределение метода для отсеивания источников с 3 цитатами."""
-    #     super().__init__(*args, **kwargs)
+    def __init__(self, *args, **kwargs):
+        """Переопределение метода для отсеивания источников с 3 цитатами."""
+        super().__init__(*args, **kwargs)
     
-    #     self.fields['source'].queryset = Source.objects.annotate(
-    #         quote_count=models.Count('quote')
-    #     ).filter(quote_count__lt=3)
+        self.fields['source'].queryset = Source.objects.annotate(
+            quote_count=models.Count('quotes')
+        ).filter(quote_count__lt=3)
 
