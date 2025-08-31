@@ -1,6 +1,7 @@
 import random
 
 from django.core.paginator import Paginator
+from django.db.models import Count
 from django.shortcuts import get_object_or_404, redirect, render
 from django.http import HttpResponse, JsonResponse
 from django.views.decorators.http import require_POST
@@ -38,9 +39,17 @@ def create_quote(request):
         form = QuoteForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('quotes:get_random_quote')
+            return redirect('quotes:get_random_quote')        
     else:
         form = QuoteForm()
+
+        sources_with_many_quotes = Source.objects.annotate(
+            quote_count=Count('quotes')
+        ).filter(quote_count__gte=3).values_list('id', flat=True)
+
+        form.fields['source'].queryset = Source.objects.exclude(
+            id__in=sources_with_many_quotes
+        )
 
     context = {
         'form': form
@@ -80,7 +89,7 @@ def delete_quote(request, quote_id):
 
     if request.method == 'POST':
         quote.delete()
-        redirect('quotes:manage_quotes')
+        return redirect('quotes:manage_quotes')
 
     context = {
         'quote': quote

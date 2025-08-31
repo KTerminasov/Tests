@@ -7,9 +7,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-o5^@&(pvc(*zb464l^1p)unulu5(o8qn%$76os5_+3(8olbzy^'
 
 
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['kterminasov.pythonanywhere.com', 'localhost', '127.0.1']
+ALLOWED_HOSTS = ['kterminasov.pythonanywhere.com', 'localhost', '127.0.0.1']
 
 
 # Application definition

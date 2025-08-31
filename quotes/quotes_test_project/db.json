@@ -3,79 +3,79 @@
   "model": "sources.source",
   "pk": 1,
   "fields": {
-    "title": "Иван Васильевич меняет профессию",
-    "tag": "Movie"
+    "title": "Мемы про котов",
+    "tag": "Other"
   }
 },
 {
   "model": "sources.source",
   "pk": 2,
   "fields": {
-    "title": "Операция «Ы» и другие приключения Шурика",
-    "tag": "Movie"
+    "title": "Игра престолов: мемная версия",
+    "tag": "Series"
   }
 },
 {
   "model": "sources.source",
   "pk": 3,
   "fields": {
-    "title": "Кавказская пленница",
-    "tag": "Movie"
+    "title": "Программистские байки",
+    "tag": "Other"
   }
 },
 {
   "model": "sources.source",
   "pk": 4,
   "fields": {
-    "title": "Джентельмены удачи",
-    "tag": "Movie"
+    "title": "The Witcher 3: Мемный хант",
+    "tag": "Game"
   }
 },
 {
   "model": "sources.source",
   "pk": 5,
   "fields": {
-    "title": "Бриллиантовая рука",
-    "tag": "Movie"
+    "title": "Научные мемы",
+    "tag": "Scientific article"
   }
 },
 {
   "model": "sources.source",
   "pk": 6,
   "fields": {
-    "title": "Война и мир",
-    "tag": "Book"
+    "title": "Офисные мемы",
+    "tag": "Other"
   }
 },
 {
   "model": "sources.source",
   "pk": 7,
   "fields": {
-    "title": "Теория относительности для чайников",
-    "tag": "Scientific article"
+    "title": "Студенческие приколы",
+    "tag": "Other"
   }
 },
 {
   "model": "sources.source",
   "pk": 8,
   "fields": {
-    "title": "The Witcher 3: Wild Hunt",
-    "tag": "Game"
+    "title": "Мемы про ЗОЖ",
+    "tag": "Other"
   }
 },
 {
   "model": "sources.source",
   "pk": 9,
   "fields": {
-    "title": "Игра престолов",
-    "tag": "Series"
+    "title": "Гарри Поттер: мемная версия",
+    "tag": "Book"
   }
 },
 {
   "model": "sources.source",
   "pk": 10,
   "fields": {
-    "title": "Народные анекдоты",
+    "title": "Соцсети: боль и страдание",
     "tag": "Other"
   }
 },
@@ -84,11 +84,11 @@
   "pk": 1,
   "fields": {
     "source": 1,
-    "quote_text": "Я требую продолжения банкета!",
-    "weight": 95,
-    "views": 1250,
-    "likes": 234,
-    "dislikes": 15
+    "quote_text": "Кот: *сбрасывает чашку со стола* \nХозяин: За что??? \nКот: За то, что вчера кормил второсортным кормом.",
+    "weight": 92,
+    "views": 15600,
+    "likes": 3450,
+    "dislikes": 120
   }
 },
 {
@@ -96,11 +96,11 @@
   "pk": 2,
   "fields": {
     "source": 1,
-    "quote_text": "Какая гадость эта ваша заливная рыба!",
-    "weight": 90,
-    "views": 980,
-    "likes": 187,
-    "dislikes": 8
+    "quote_text": "Я не сплю, я просто проверяю веки на прочность. © Кот-философ",
+    "weight": 88,
+    "views": 12800,
+    "likes": 2890,
+    "dislikes": 95
   }
 },
 {
@@ -108,11 +108,11 @@
   "pk": 3,
   "fields": {
     "source": 1,
-    "quote_text": "Оставьте меня, старушка, я в печали.",
-    "weight": 85,
-    "views": 745,
-    "likes": 156,
-    "dislikes": 12
+    "quote_text": "Кот у ветеринара: Доктор, у меня лапка болит. \nВрач: А что случилось? \nКот: Хозяин наступил. \nВрач: Случайно? \nКот: Нет, по графику.",
+    "weight": 95,
+    "views": 18900,
+    "likes": 4120,
+    "dislikes": 150
   }
 },
 {
@@ -120,11 +120,11 @@
   "pk": 4,
   "fields": {
     "source": 2,
-    "quote_text": "Надо, Федя, надо!",
-    "weight": 88,
-    "views": 1120,
-    "likes": 245,
-    "dislikes": 6
+    "quote_text": "Зима близко... а я еще летние шины не поменял.",
+    "weight": 85,
+    "views": 11200,
+    "likes": 2560,
+    "dislikes": 110
   }
 },
 {
@@ -132,11 +132,11 @@
   "pk": 5,
   "fields": {
     "source": 2,
-    "quote_text": "Опомнись, Иванов, ты же профессор!",
-    "weight": 82,
-    "views": 890,
-    "likes": 178,
-    "dislikes": 9
+    "quote_text": "Дейенерис: У меня три дракона! \nДжон Сноу: А у меня есть кот. \nДраконы: *в ужасе*",
+    "weight": 90,
+    "views": 14500,
+    "likes": 3230,
+    "dislikes": 130
   }
 },
 {
@@ -144,11 +144,11 @@
   "pk": 6,
   "fields": {
     "source": 3,
-    "quote_text": "Шурик, это ненаучно!",
-    "weight": 87,
-    "views": 1020,
-    "likes": 210,
-    "dislikes": 11
+    "quote_text": "Написало 100 строк кода → Запустило → Работает с первого раза: \n*Паника* \n*Перепроверяет всё 10 раз* \n*Ждёт подвоха*",
+    "weight": 89,
+    "views": 16700,
+    "likes": 3780,
+    "dislikes": 140
   }
 },
 {
@@ -156,23 +156,23 @@
   "pk": 7,
   "fields": {
     "source": 3,
-    "quote_text": "Гусар денег не берет! Гусар деньги берет... в долг!",
-    "weight": 93,
-    "views": 1560,
-    "likes": 312,
-    "dislikes": 18
+    "quote_text": "Компилятор: Ошибка в строке 1 \nЯ: *проверяет строку 1* \nКомпилятор: Псих! Ошибка в строке 247!",
+    "weight": 87,
+    "views": 13400,
+    "likes": 3010,
+    "dislikes": 125
   }
 },
 {
   "model": "quotes.quote",
   "pk": 8,
   "fields": {
-    "source": 4,
-    "quote_text": "Зачем ты меня обижаешь, Лёлик?",
-    "weight": 89,
-    "views": 1340,
-    "likes": 267,
-    "dislikes": 14
+    "source": 3,
+    "quote_text": "Stack Overflow: Вот решение твоей проблемы! \nЯ: *пробует* \nStack Overflow: А теперь найди, почему это не работает!",
+    "weight": 84,
+    "views": 15600,
+    "likes": 3450,
+    "dislikes": 160
   }
 },
 {
@@ -180,23 +180,23 @@
   "pk": 9,
   "fields": {
     "source": 4,
-    "quote_text": "Утром деньги — вечером стулья, вечером деньги — утром стулья.",
+    "quote_text": "Геральт: Нужно выбрать меньшее из двух зол. \nТакже Геральт: *играет в гвинт 3 часа*",
     "weight": 91,
-    "views": 1450,
-    "likes": 289,
-    "dislikes": 16
+    "views": 12300,
+    "likes": 2780,
+    "dislikes": 100
   }
 },
 {
   "model": "quotes.quote",
   "pk": 10,
   "fields": {
-    "source": 5,
-    "quote_text": "Чтоб ты жил на одну зарплату!",
+    "source": 4,
+    "quote_text": "Цири: Я императрица! \nТакже Цири: *прячется от ответственности в очередном подземелье*",
     "weight": 86,
-    "views": 1670,
-    "likes": 345,
-    "dislikes": 22
+    "views": 9800,
+    "likes": 2230,
+    "dislikes": 90
   }
 },
 {
@@ -204,119 +204,155 @@
   "pk": 11,
   "fields": {
     "source": 5,
-    "quote_text": "Не вижу горизонта!",
-    "weight": 84,
-    "views": 1230,
-    "likes": 256,
-    "dislikes": 13
+    "quote_text": "Кот Шрёдингера: Я и жив, и мёртв. \nМой кот в 6 утра: Только мёртв. До обеда.",
+    "weight": 88,
+    "views": 14500,
+    "likes": 3120,
+    "dislikes": 110
   }
 },
 {
   "model": "quotes.quote",
   "pk": 12,
   "fields": {
-    "source": 6,
-    "quote_text": "Все счастливые семьи похожи друг на друга, каждая несчастливая семья несчастлива по-своему. Особенно когда теща приезжает.",
-    "weight": 78,
-    "views": 980,
-    "likes": 198,
-    "dislikes": 25
+    "source": 5,
+    "quote_text": "Ньютон: Я открыл закон всемирного тяготения! \nЯ: *роняю телефон на лицо, лёжа в кровати* \nНьютон: Я предупреждал.",
+    "weight": 93,
+    "views": 17800,
+    "likes": 3890,
+    "dislikes": 135
   }
 },
 {
   "model": "quotes.quote",
   "pk": 13,
   "fields": {
-    "source": 7,
-    "quote_text": "E=mc², но только если c — это скорость света, а не скорость, с которой ты бежишь к холодильнику ночью.",
-    "weight": 80,
-    "views": 1560,
-    "likes": 345,
-    "dislikes": 28
+    "source": 6,
+    "quote_text": "Понедельник: *наступает* \nЯ: *в панике* \nТакже я: *проверил почту 10 раз за 5 минут*",
+    "weight": 82,
+    "views": 13400,
+    "likes": 2890,
+    "dislikes": 150
   }
 },
 {
   "model": "quotes.quote",
   "pk": 14,
   "fields": {
-    "source": 8,
-    "quote_text": "Ведьмак — это не просто профессия, это призвание. Особенно когда нужно выбрать: сыграть в гвинт или спасти мир.",
-    "weight": 83,
-    "views": 1890,
-    "likes": 412,
-    "dislikes": 19
+    "source": 6,
+    "quote_text": "Босс: Срочно нужно сделать! \nЯ: *делает* \nБосс: Отлично! А теперь переделай.",
+    "weight": 85,
+    "views": 15600,
+    "likes": 3340,
+    "dislikes": 170
   }
 },
 {
   "model": "quotes.quote",
   "pk": 15,
   "fields": {
-    "source": 9,
-    "quote_text": "Зима близко... а отопление еще не включили.",
-    "weight": 79,
-    "views": 1340,
-    "likes": 289,
-    "dislikes": 31
+    "source": 7,
+    "quote_text": "Студент: Я выучу всё за ночь до экзамена! \nМозг: Ха-ха, нет.",
+    "weight": 90,
+    "views": 16700,
+    "likes": 3670,
+    "dislikes": 120
   }
 },
 {
   "model": "quotes.quote",
   "pk": 16,
   "fields": {
-    "source": 10,
-    "quote_text": "Программист на собеседовании: 'Опыт работы с Python — 5 лет'. На самом деле: 'Смотрел 5 лет видео про Python на YouTube'.",
-    "weight": 88,
-    "views": 2450,
-    "likes": 512,
-    "dislikes": 17
+    "source": 7,
+    "quote_text": "Сессия: *началась* \nЯ: *включает режим бога* \nТакже я: *не знает, как включить режим бога*",
+    "weight": 87,
+    "views": 14500,
+    "likes": 3120,
+    "dislikes": 140
   }
 },
 {
   "model": "quotes.quote",
   "pk": 17,
   "fields": {
-    "source": 10,
-    "quote_text": "Моя жизнь — это постоянный выбор между 'лягу спать пораньше' и 'посмотрю еще одну серию'.",
-    "weight": 85,
-    "views": 1980,
-    "likes": 423,
-    "dislikes": 24
+    "source": 8,
+    "quote_text": "Я: С понедельника начинаю ЗОЖ! \nПонедельник: *наступает* \nЯ: Со следующего понедельника.",
+    "weight": 89,
+    "views": 12300,
+    "likes": 2670,
+    "dislikes": 100
   }
 },
 {
   "model": "quotes.quote",
   "pk": 18,
   "fields": {
-    "source": 10,
-    "quote_text": "Девушка: 'Я не сложная, я просто со своими правилами'. Ее правила:",
-    "weight": 82,
-    "views": 1760,
-    "likes": 378,
-    "dislikes": 42
+    "source": 8,
+    "quote_text": "Тренер: Ещё 10 приседаний! \nЯ: *делает 2* \nТренер: Отлично! Теперь ещё 8!",
+    "weight": 84,
+    "views": 9800,
+    "likes": 2120,
+    "dislikes": 95
   }
 },
 {
   "model": "quotes.quote",
   "pk": 19,
   "fields": {
-    "source": 7,
-    "quote_text": "Кот Шрёдингера одновременно и жив, и мертв. Мой кот в 6 утра: только мертв.",
-    "weight": 87,
-    "views": 1670,
-    "likes": 356,
-    "dislikes": 15
+    "source": 9,
+    "quote_text": "Гарри: У меня есть палочка из омелы! \nДрако: А у меня палочка получше! \nГермиона: Ребята, вам уже по 30 лет...",
+    "weight": 91,
+    "views": 15600,
+    "likes": 3450,
+    "dislikes": 130
   }
 },
 {
   "model": "quotes.quote",
   "pk": 20,
   "fields": {
-    "source": 8,
-    "quote_text": "Ведьмак: 'Меч лучше магии'. Также ведьмак: *постоянно использует знаки и зелья*.",
-    "weight": 84,
-    "views": 1450,
-    "likes": 312,
-    "dislikes": 21
+    "source": 9,
+    "quote_text": "Дамблдор: Счастье можно найти даже в тёмные времена. \nТакже Дамблдор: *ещё одно лимонное леденцовое*",
+    "weight": 86,
+    "views": 13400,
+    "likes": 2890,
+    "dislikes": 110
+  }
+},
+{
+  "model": "quotes.quote",
+  "pk": 21,
+  "fields": {
+    "source": 10,
+    "quote_text": "Инстаграм: Вот как живут другие! \nЯ: *прокручивает ленту* \nРеальность: *плачет в углу*",
+    "weight": 88,
+    "views": 18900,
+    "likes": 4120,
+    "dislikes": 180
+  }
+},
+{
+  "model": "quotes.quote",
+  "pk": 22,
+  "fields": {
+    "source": 10,
+    "quote_text": "Тикток: *показывает идеальную жизнь* \nЯ: *смотрит с пакетом чипсов* \nЧипсы: Мы тебя не осуждаем.",
+    "weight": 92,
+    "views": 16700,
+    "likes": 3780,
+    "dislikes": 160
+  }
+},
+{
+  "model": "quotes.quote",
+  "pk": 23,
+  "fields": {
+    "source": 10,
+    "quote_text": "Я: Пора завязывать с соцсетями! \nТакже я: *проверяет уведомления каждые 5 минут*",
+    "weight": 85,
+    "views": 14500,
+    "likes": 3120,
+    "dislikes": 140
   }
 }
 ]

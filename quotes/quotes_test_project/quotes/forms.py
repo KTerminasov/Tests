@@ -22,11 +22,11 @@ class QuoteForm(forms.ModelForm):
                 }),
         }
 
-    def __init__(self, *args, **kwargs):
-        """Переопределение метода для отсеивания источников с 3 цитатами."""
-        super().__init__(*args, **kwargs)
+    # def __init__(self, *args, **kwargs):
+    #     """Переопределение метода для отсеивания источников с 3 цитатами."""
+    #     super().__init__(*args, **kwargs)
     
-        self.fields['source'].queryset = Source.objects.annotate(
-            quote_count=models.Count('quotes')
-        ).filter(quote_count__lt=3)
+    #     self.fields['source'].queryset = Source.objects.annotate(
+    #         quote_count=models.Count('quotes')
+    #     ).filter(quote_count__lt=3)
 
