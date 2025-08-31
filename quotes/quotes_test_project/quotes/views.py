@@ -131,4 +131,11 @@ def manage_quotes(request):
 def get_top_quotes(request):
     """Получение самых популярных цитат."""
 
-    return HttpResponse('Здесь будут лучшие цитаты.')
+    template = 'quotes/top_quotes.html'
+
+    quotes = Quote.objects.order_by('-likes')[:10]    
+    context = {
+        'quotes': quotes
+    }
+    
+    return render(request, template, context)
